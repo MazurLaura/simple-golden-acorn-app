@@ -1,6 +1,7 @@
 import Button from './Button';
 import Display from './Display';
 import { useState, useEffect } from 'react';
+import App from './App';
 
 
 function SimpleGoldenAcornApp() {
@@ -32,6 +33,8 @@ function SimpleGoldenAcornApp() {
 
   return (
     <div>
+      <App />
+      <h1>Golden Acorn application with states</h1>
       <Button buttonClick={buyAcorn} name='Buy one' />
       <Display>
         <p>{acorn}</p>

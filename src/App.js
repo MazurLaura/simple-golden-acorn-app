@@ -1,41 +1,22 @@
-import './App.css';
 //import { checkPropTypes } from 'prop-types';
-import PropTypes from 'prop-types';
 //import { useState } from 'react';
+import './App.css';
+import PropTypes from 'prop-types';
 import Button from './Button';
 import Display from './Display';
-import SimpleGoldenAcornApp from './SimpleGoldenAcornApp';
+//import SimpleGoldenAcornApp from './SimpleGoldenAcornApp';
+import { NavLink } from "react-router-dom";
 
 
 function App() {
-  /* Ez át lett téve a class-osba
-
-  const [acorn, setAcorn] = useState(0);
-
-  function buyAcorn(props) {
-    setAcorn(acorn + 1);
-  }
-
-  function eatAcorn(props) {
-    if (acorn > 0) {
-      setAcorn(acorn - 1);
-    } else {
-      setAcorn(acorn);
-    }
-  }
-  */
+  
 
   return (
     <div className="App">
-      <SimpleGoldenAcornApp />
+      {/*<SimpleGoldenAcornApp /> */}
 
-      {/*} Ez is át lett téve a class-osba
-      <Button buttonClick={buyAcorn} name='Buy one' />
-      <Display>
-        <p>{acorn}</p>
-      </Display>
-      <Button buttonClick={eatAcorn} name='Eat one' />
-      */}
+      <NavLink to={'/'}>Home</NavLink> | {" "}
+      <NavLink to={'/simple/states'}>With states</NavLink>
     </div>
   );
 }

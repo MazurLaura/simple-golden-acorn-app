@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import SimpleGoldenAcornApp from './SimpleGoldenAcornApp';
+//import './index.css';
+//import App from './App';
+import Home from './Home';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route exact path='/' element={<Home />}/> 
+      <Route path='/simple/states' element={<SimpleGoldenAcornApp />}/>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
